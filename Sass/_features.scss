@@ -1,0 +1,46 @@
+.features {
+    grid-column: center-start/center-end;
+    grid-row: feature-start/feature-end;
+    padding: 8rem 6rem;
+
+    @media only screen and (max-width: $bp-small) {
+        justify-self: center;
+        
+    }
+
+    .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24.5rem, 1fr));
+        grid-column-gap: 7rem;
+        grid-row-gap: 7rem;
+
+
+
+
+        .feature {
+            display: grid;
+            grid-template-rows: repeat(2,min-content);
+            grid-template-columns: 5rem 22rem;
+            grid-column-gap: 2rem;
+            align-items: start;
+            .feature-icon {
+                grid-row: 1/-1;
+                fill: $color-grey-dark-2;
+                width: 4.5rem;
+                height: 4rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                color: $color-secondary;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 1.7rem;
+                line-height: 1.6;
+                color: $color-grey-dark-2;
+            }
+        }
+    }
+}

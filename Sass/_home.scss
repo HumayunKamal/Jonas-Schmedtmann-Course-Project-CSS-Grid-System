@@ -1,0 +1,133 @@
+.home {
+    grid-column: center-start/center-end;
+    display: grid;
+    padding: 10rem 6rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(24.5rem, 1fr));
+    grid-column-gap: 7rem;
+    grid-row-gap: 7rem;
+
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 10rem 12rem;
+        
+    }
+    @media only screen and (max-width: $bp-x-small) {
+        padding: 10rem 6rem;
+        
+    }
+
+
+    .home-entity {
+        background-color: #f9f7f6;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-row-gap: 1.5rem;
+
+
+        position: relative;
+
+
+        .img {
+            width: 100%;
+            grid-column: 1/-1;
+            grid-row: 1/2;
+
+        }
+
+        .heading {
+
+
+            grid-column: 1/-1;
+            grid-row: 1/2;
+
+            font-size: 1.6rem;
+            background-color: $color-secondary;
+            color: $color-grey-light-1;
+            padding: 1rem;
+
+            justify-self: center;
+            align-self: end;
+
+
+        }
+
+        .feature-list {
+            display: grid;
+            grid-column: 1/-1;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+
+            justify-self: center;
+            align-self: end;
+
+
+            .feature {
+                grid-template-columns: repeat(2, 1fr);
+
+
+                .feature-icon {
+                    height: 2rem;
+                    width: 2rem;
+
+                    margin-right: .5rem;
+
+                }
+
+                span {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+
+            }
+
+        }
+
+        .cta {
+            grid-column: 1/-1;
+            grid-row: 3/4;
+
+            align-self: end;
+            
+
+            .cta-btn {
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                font-weight: 500;
+                padding: 1.2rem 2rem;
+                width: 100%;
+                border: none;
+                background-color: $color-primary;
+                color: $color-grey-light-1;
+                cursor: pointer;
+
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: $color-primary-dark;
+                }
+
+            }
+
+        }
+
+        .heart-shape {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            height: 2.4rem;
+            width: 2.4rem;
+            fill: $color-primary;
+
+            justify-self: end;
+            position: absolute;
+            top: 1.4rem;
+            right: 1.4rem;
+        }
+    }
+}

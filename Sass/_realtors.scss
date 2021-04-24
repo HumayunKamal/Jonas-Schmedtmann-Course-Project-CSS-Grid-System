@@ -1,0 +1,92 @@
+.realtors {
+    background-color: $color-secondary;
+    grid-column: col-start 7/full-end;
+    padding: 5rem;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-row-gap: 2rem;
+
+    justify-content: center;
+    align-content: center;
+
+
+    .heading {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    .realtors-list {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: max-content max-content;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 3rem;
+        justify-content: center;
+        align-items: center;
+
+
+        .realtors-image {
+            width: 6rem;
+            border-radius: 100%;
+        }
+
+        .realtors-detail {
+            h3 {
+                font-size: 1.4rem;
+                color: $color-grey-light-1;
+            }
+
+            p {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                color: $color-grey-light-2;
+            }
+        }
+    }
+    @media only screen and (max-width: $bp-small) {
+        display: grid;
+        grid-column: full-start/ full-end;
+        
+
+        .realtors-list {
+            display: grid;
+            grid-template-columns: repeat(6,max-content);
+            grid-template-rows: max-content;
+            grid-column-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            
+
+            .realtors-detail{
+                margin-left: -1.5rem;
+            }
+        }
+
+        
+    }
+    @media only screen and (max-width: $bp-x-small) {
+        display: grid;
+        grid-column: full-start/ full-end;
+        
+
+        .realtors-list {
+
+
+            display: grid;
+            grid-template-rows: repeat(6,max-content);
+            grid-template-columns: max-content;
+            grid-row-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            
+
+            .realtors-detail{
+                justify-self: center;
+                margin-left: -1.5rem;
+            }
+        }
+
+        
+    }
+
+}

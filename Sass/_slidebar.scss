@@ -1,0 +1,35 @@
+.slidebar {
+    background-color: $color-primary;
+    grid-row: 1/-1;
+    position: relative;
+    @media only screen and (max-width:$bp-large){
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
+    button {
+        position: absolute;
+        top: 4rem;
+        left: 2rem;
+        border: none;
+        background-color: $color-grey-light-1;
+        width: 4rem;
+        height: 4px;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 4rem;
+            height: 4px;
+            background-color: $color-grey-light-1;
+            display: block;
+
+        }
+        &::before{
+            transform: translateY(-1.3rem);
+        }
+        &::after{
+            transform: translateY(1rem);
+        }
+    }
+}
